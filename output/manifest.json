@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "runbooks": [
+    {
+      "schemaVersion": 1,
+      "id": "aws-s3-upload-error",
+      "source": {
+        "path": "runbooks/aws/s3-upload-error.runbook.md"
+      },
+      "outputs": {
+        "confluence": {
+          "path": "output/confluence/aws-s3-upload-error"
+        },
+        "html": {
+          "path": "output/html/aws-s3-upload-error/index.html"
+        },
+        "pdf": {
+          "path": "output/pdf/aws-s3-upload-error.pdf"
+        }
+      },
+      "hashes": {
+        "source": "sha256:5d93b977aa104059cd8669d27655bee4f65d750f9e106fc76491ebfc3e6da3d7",
+        "html": "sha256:c75444ba30ca8f78903054572dc2f5736828c4ad706a605e579d7a53f2765533",
+        "pdf": "sha256:1c676ebd5fc6b99591af44e362c784469728bd6040c834eac5ee429a660d981a"
+      }
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+# Usage: place action.yml at the repository root and this file under
+# .github/workflows/.  The pinned image must first be pushed to Docker Hub as
+# runbook-publisher:0.1.0 (make build produces it; publishing is manual).
+name: publish-runbooks
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - "**/*.runbook.md"
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Publish runbooks
+        uses: ./
+        env:
+          CONFLUENCE_SERVER_URL: ${{ secrets.CONFLUENCE_SERVER_URL }}
+          CONFLUENCE_SPACE_NAME: ${{ secrets.CONFLUENCE_SPACE_NAME }}
+          CONFLUENCE_USERNAME: ${{ secrets.CONFLUENCE_USERNAME }}
+          CONFLUENCE_API_TOKEN: ${{ secrets.CONFLUENCE_API_TOKEN }}

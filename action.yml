@@ -1,0 +1,15 @@
+name: Publish operational runbooks
+description: Build and publish runbooks to Confluence, HTML, and PDF
+inputs:
+  root:
+    description: Repository path to scan
+    default: .
+  pattern:
+    description: Runbook glob
+    default: "**/*.runbook.md"
+  config:
+    description: Publishing configuration path
+    default: runbook-publishing.yaml
+runs:
+  using: docker
+  image: docker://runbook-publisher:0.1.0

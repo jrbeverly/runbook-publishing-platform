@@ -1,0 +1,16 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "sphinx-runbook"
+version = "0.1.0"
+description = "Sphinx extension defining runbook semantics once and rendering per target"
+requires-python = ">=3.9"
+dependencies = [
+    "sphinx>=7.0",
+    "PyYAML>=6.0",
+]
+
+[tool.setuptools]
+packages = ["sphinx_runbook"]

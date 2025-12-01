@@ -1,0 +1,11 @@
+extensions = ["myst_parser", "sphinx_runbook", "sphinxcontrib.confluencebuilder"]
+source_suffix = {".md": "myst"}
+root_doc = "index"
+exclude_patterns = ["_build"]
+html_theme = "alabaster"
+html_static_path = ["_static"]
+html_css_files = ["runbook.css"]
+runbook_title_prefix = "Runbook: "
+confluence_publish = False
+confluence_server_url = "https://example.atlassian.net/wiki"
+confluence_space_name = "RBK"
